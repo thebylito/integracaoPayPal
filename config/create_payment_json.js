@@ -5,8 +5,8 @@ module.exports = (hostname) => {
       payment_method: 'paypal',
     },
     redirect_urls: {
-      return_url: `http://${hostname}/callback`,
-      cancel_url: `http://${hostname}/cancelado`,
+      return_url: `${hostname}/callback`,
+      cancel_url: `${hostname}/cancelado`,
     },
     transactions: [
       {

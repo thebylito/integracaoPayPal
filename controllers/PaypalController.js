@@ -6,7 +6,7 @@ class PayPalController {
       const payment = await (() =>
         new Promise((resolve, reject) => {
           paypal.payment.create(
-            create_payment_json(req.headers.host),
+            create_payment_json('https://paypal.thebylito.com'),//ENDPOINT DE RETORNO
             (err, payment) => {
               if (err) return reject(err);
               resolve(payment);
